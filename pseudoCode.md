@@ -11,6 +11,10 @@ will need middleware
 error handling 
 test those routes 
 
+route to get to homepage
+route to get a specific users dashboard 
+ 
+
 create a front end with handlebars (very minimal at first)
 page for homepage 
 page for login
