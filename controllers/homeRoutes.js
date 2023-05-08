@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const {Post, Comment, User} = require('../models')
 // need to get a authorization deal going 
-const withAuth = require('../utils/auth')
+// const withAuth = require('../utils/auth')
 
 router.get('/',async (req, res) =>{
     try{
@@ -25,18 +25,24 @@ router.get('/',async (req, res) =>{
 
 router.get('/post/:id', async(req,res)=>{
     try{
-        const postData = await Post.findByPk(res.params.id,{
+        const postData = await Post.findByPk(req.params.id,{
             include:[
-                {model:Comment}, 
+                {model:Comment, 
+                include: 
                 {
                     model: User,
-                attributes: ['user_name']
+                    attributes: ['user_name']
                 }
+            },
+            {model: User,
+            attributes: ['user_name']}
+            
+
         ]
         })
         const post = postData.get({plain:true})
-
-        res.render('post',{post})
+        console.log(post)
+        res.render('post',{post, logged_in: req.session.logged_in})
         
     }catch (err){
         res.status(500).json(err)

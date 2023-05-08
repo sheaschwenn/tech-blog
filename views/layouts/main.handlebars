@@ -9,6 +9,14 @@
 </head>
 
 <body>
+    <nav>
+        {{#if logged_in}}
+        <a href="/dashboard">Dashboard</a>
+        <button class="'no-button" id="logout">Logout</button>
+        {{else}}
+        <a href="/login">login</a>
+        {{/if}}
+    </nav>
     {{{body}}}
 </body>
 </html>
