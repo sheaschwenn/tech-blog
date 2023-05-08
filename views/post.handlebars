@@ -1,6 +1,9 @@
 <div class="text-center">
     <h2>{{post.title}}</h2>
+    <p>Written on {{formatDate post.createdAt "MMM DD, YYYY h:mm A"}}</p>
     <p>{{post.contents}}</p>
+    <p> - {{post.user.user_name}}</p>
+    
 </div>
 
 <div class="text-center">
