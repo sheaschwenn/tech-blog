@@ -87,4 +87,4 @@ document
 
 document
     .querySelector('.signup-form')
-    .addEventListener('click', signupFormHandler);
+    .addEventListener('submit', signupFormHandler);
