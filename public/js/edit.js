@@ -1,17 +1,17 @@
 const editFormHandler = async(event) =>{
     event.preventDefault();
 
-    const title = document.querySelector('#post-title');
-    const contents = document.querySelector('#post-body');
+    const title = document.querySelector('#post-title').value.trim();
+    const contents = document.querySelector('#post-body').value.trim();
     const id = window.location.pathname.split('/').pop()
 
-    const response = await fetch(`/api/posts/${id}`,{
+    const response = await fetch(`/api/posts/${id}`,  {
         method: 'PUT',
-        body: JSON.stringify({title, contents}),
+        body: JSON.stringify({title, contents, id}),
         headers:{'Content-Type': 'application/json'}
     })
     if(response.ok){
-        document.location.replace(`/post/${post_id}`)
+        document.location.replace('/dashboard')
     }else{
         alert('Failed to post')
     }
@@ -36,6 +36,6 @@ const deletePost = async(event) =>{
     }
 }
 
-document.querySelector('#update-btn').addEventListener('submit',editFormHandler)
+document.querySelector('#edit-form').addEventListener('submit',editFormHandler)
 document.querySelector('#delete-btn').addEventListener('click',deletePost)
 

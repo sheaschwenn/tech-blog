@@ -21,6 +21,7 @@ Full-stack tech blog application
 Full stack tech blog application. Create an account, login, view other users blog posts, create your own blog posts, comment on other users posts, delete and update your own.  
 
 
+
 ## Table of Contents 
 
 * [Installation](#installation)
@@ -48,6 +49,8 @@ npm start
 ## Usage 
 
 Create a blog post and stay up to date on the latest tech trends and information.
+
+If signing up for the first time type your user credentials into the login form
 
 
 
