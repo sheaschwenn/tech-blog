@@ -22,6 +22,7 @@ const loginFormHandler = async(event) =>{
 
 const signupFormHandler = async (event) => {
     event.preventDefault();
+    event.stopPropagation();
   
     const user_name = document.querySelector('#username-signup').value.trim();
     const password = document.querySelector('#password-signup').value.trim();
@@ -41,7 +42,7 @@ const signupFormHandler = async (event) => {
         alert(response.statusText);
       }
     }
-    event.stopPropagation();
+   
   };
   
   document
