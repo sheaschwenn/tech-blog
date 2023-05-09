@@ -63,21 +63,19 @@ const signupFormHandler = async (event) => {
   
     if (user_name && password) {
       // Send a POST request to the users route to create a new user
-      const response = await fetch('/api/user', {
-        method: 'POST',
-        body: JSON.stringify({ user_name, password }),
-        headers: { 'Content-Type': 'application/json' },
-      });
-  
-      // Check if the response is successful
-      if (response.ok) {
-        // Redirect to the dashboard after successful signup
-        document.location.replace('/dashboard');
-      } else {
-        // Display an alert if signup fails
-        alert('Failed to sign up.');
-      }
-    }
+      try {
+        await fetch('/api/user', {
+            method: 'POST',
+            body: JSON.stringify({ user_name, password }),
+            headers: { 'Content-Type': 'application/json' },
+          });
+            // Redirect to the dashboard after successful signup
+            document.location.replace('/dashboard');
+          } catch (error) {
+            console.log(error);
+            alert("Failed to signup");
+          }
+        }
   };
   
 
