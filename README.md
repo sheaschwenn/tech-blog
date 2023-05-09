@@ -14,14 +14,11 @@ Full-stack tech blog application
 
 ## Description 
 
-[Visit the Deployed Site](https://youtu.be/BFyeuLhjcPY)
+[Visit the Deployed Site](https://tech-blog-cmv.herokuapp.com/)
 
+![Site Langing Page](./assets/tech-blog.gif)
 
-
-
-
-
-![Site Langing Page](./site.gif)
+Full stack tech blog application. Create an account, login, view other users blog posts, create your own blog posts, comment on other users posts, delete and update your own.  
 
 
 ## Table of Contents 
@@ -53,12 +50,9 @@ npm start
 Create a blog post and stay up to date on the latest tech trends and information.
 
 
-![alt text](assets/images/screenshot.png)
-
-
 
 ## Learning Points 
-This was my first time ever creating a full stack application from scratch. It was a journey and I learned a lot
+This was my first time ever creating a full stack application from scratch. It was a journey and I learned a lot.  In the future I would like to add some CSS to create a better UI. 
 * handlebars 
 * MVC model
 * more on routes
@@ -80,7 +74,6 @@ This was my first time ever creating a full stack application from scratch. It w
 
 
 
-
 ## License
 MIT License 
 
@@ -88,4 +81,3 @@ Check LICENSE in the repo for more information.
 
 
 
-© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
