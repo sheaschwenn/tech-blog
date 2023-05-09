@@ -3,7 +3,7 @@ const{Comment} = require('../../models');
 const withAuth = require('../../utils/auth')
 
 router.post('/', withAuth, async (req,res) => {
-    if(req.session){
+    if(req.session.logged_in){
     try{
       
         const commentData = await Comment.create({
