@@ -5,7 +5,7 @@ const editFormHandler = async(event) =>{
     const contents = document.querySelector('#post-body');
     const id = window.location.pathname.split('/').pop()
 
-    const response = await fetch(`/api/post/${id}`,{
+    const response = await fetch(`/api/posts/${id}`,{
         method: 'PUT',
         body: JSON.stringify({title, contents}),
         headers:{'Content-Type': 'application/json'}
@@ -24,7 +24,7 @@ const deletePost = async(event) =>{
    
     const id = window.location.pathname.split('/').pop()
 
-    const response = await fetch(`/api/post/${id}`,{
+    const response = await fetch(`/api/posts/${id}`,{
         method: 'DELETE',
         body: JSON.stringify({post_id:id}),
         headers:{'Content-Type': 'application/json'}
