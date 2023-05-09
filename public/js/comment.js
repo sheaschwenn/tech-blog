@@ -3,7 +3,7 @@ const commentFormHandler = async(event) =>{
 
     const comment = document.querySelector('#comment').value.trim()
     const post_id = window.location.pathname.split('/').pop()
-    console.log("this is the post id" + post_id)
+    
     if(comment){
         const response = await fetch('/api/comment',{
             method: 'POST',
@@ -11,11 +11,11 @@ const commentFormHandler = async(event) =>{
             headers:{'Content-Type': 'application/json'}
         })
         if(response.ok){
-            document.location.reload()
+            document.location.replace(`/post/${post_id}`)
         }else{
             alert('Failed to post')
         }
     }
 }
 
-document.querySelector('.comment-form').addEventListener('submit',commentFormHandler)
+document.querySelector('.new-comment-form').addEventListener('submit',commentFormHandler)
