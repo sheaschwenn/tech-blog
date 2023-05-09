@@ -50,7 +50,7 @@ npm start
 
 Create a blog post and stay up to date on the latest tech trends and information.
 
-If signing up for the first time type your user credentials into the login form
+
 
 
 
