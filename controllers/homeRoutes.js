@@ -47,6 +47,36 @@ router.get('/post/:id', async(req,res)=>{
     }catch (err){
         res.status(500).json(err)
     }
+
+    // try{
+    //     const postData = await Post.findOne({
+    //         where:{
+    //         id:req.params.id,
+    //     },
+    //     {
+    //         include:[
+    //             {model:Comment, 
+    //             include: 
+    //             {
+    //                 model: User,
+    //                 attributes: ['user_name']
+    //             }
+    //         },
+    //         {model: User,
+    //         attributes: ['user_name']
+    //     },
+    // },
+            
+
+    //     ]
+    //     })
+    //     const post = postData.get({plain:true})
+    //     console.log(post)
+    //     res.render('post',{post, logged_in: req.session.logged_in})
+        
+    // }catch (err){
+    //     res.status(500).json(err)
+    // }
 })
 
 router.get('/login', (req, res) => {

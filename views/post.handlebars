@@ -12,6 +12,7 @@
 {{#each post.comments}}
 <h4>{{this.user.user_name}}</h4>
     <p>{{this.comment}}</p>
+    <p>{{formatDate this.createdAt "MMM DD, YYYY h:mm A"}}</p>
     {{/each}}
     {{else}}
     <p>No comments yet</p>

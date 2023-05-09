@@ -16,7 +16,9 @@ const hbs = exphbs.create({ helpers });
 
 const sess = {
     secret:'nobody knows this',
-    cookie:{},
+    cookie:{
+        maxAge:1800000
+    },
     resave:false,
     saveUninitialized: true,
     store: new SequelizeStore({
